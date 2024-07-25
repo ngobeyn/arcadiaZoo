@@ -11972,7 +11972,7 @@ html {
 }
 
 main {
-  margin-bottom: 350px;
+  margin-bottom: 370px;
 }
 
 footer.footer {
@@ -12143,4 +12143,33 @@ hr {
   background-image: url("../images/sakura.png");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.container-acc-inf {
+  position: relative;
+  border: 1px solid #CCB27E;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 500px;
+}
+
+.container-acc-inf h2, .container-acc-inf .h2 {
+  color: #586500;
+  font-family: "Shadows Into Light", sans-serif;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #CCB27E;
+  padding-bottom: 10px;
+}
+
+.container-acc-inf p {
+  margin: 10px 0;
+  font-family: "Hind Madurai", serif;
+}
+
+.container-acc-inf p strong {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
 }/*# sourceMappingURL=main.css.map */
