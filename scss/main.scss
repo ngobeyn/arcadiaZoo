@@ -7,7 +7,7 @@ html{
 }
 
 main{
-    margin-bottom: 350px;
+    margin-bottom: 370px;
 }
 
 footer.footer{
@@ -183,3 +183,38 @@ hr {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.container-acc-inf {
+    position: relative;
+    border: 1px solid $secondary;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 500px;
+}
+.container-acc-inf h2 {
+    color: $primary;
+    font-family: $font-family-sans-serif;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $secondary;
+    padding-bottom: 10px;
+}
+.container-acc-inf p {
+    margin: 10px 0;
+    font-family: $font-family-serif;
+}
+.container-acc-inf p strong {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+.container-form-center {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
