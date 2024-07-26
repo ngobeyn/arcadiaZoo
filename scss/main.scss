@@ -209,3 +209,15 @@ hr {
     width: 100px;
     text-align: left;
 }
+
+.container-role {
+    border: 1px solid $dark;
+    border-radius: 8px;
+    text-align: center;
+    font-family: $font-family-serif;
+    color: $dark;
+    font-weight: bold;
+    max-width: 90%;
+    width: 90%;
+    margin: 0 auto;
+}

@@ -5,26 +5,33 @@
     </div>
 </div>
 
+<!-- Début du formulaire de création d'utilisateur -->
 <div class="container container-form-center p-2">
+    <p class="text-danger">Tous les champs sont obligatoires.</p>
     <form class="form-container">
       <div class="mb-3">
-        <label for="NomInput" class="form-label">Nom <span>*</span></label>
+        <label for="NomInput" class="form-label">Nom</label>
         <input type="text" class="form-control input-field" id="NomInput" name="Nom">
       </div>
       <div class="mb-3">
-        <label for="PrenomInput" class="form-label">Prénom <span>*</span></label>
+        <label for="PrenomInput" class="form-label">Prénom</label>
         <input type="text" class="form-control input-field" id="PrenomInput" name="Prénom">
       </div>
       <div class="mb-3">
-        <label for="EmailInput" class="form-label">Email <span>*</span></label>
+        <label for="EmailInput" class="form-label">Email</label>
         <input type="text" class="form-control input-field" id="EmailInput" placeholder="contact@email.com" name="Email">
-      </div><br />
-      <!-- Créer une liste déroulante avec trois choix Admin/Employé/Vétérinaire-->
-      <div class="mb-3">
-        <label for="RoleInput" class="form-label">Rôle <span>*</span></label>
-        <input type="text" class="form-control input-field" id="RoleInput" Placeholder="ICI LISTE DEROULANTE - Admin/Employé/Vétérinaire" name="Role">
-      </div><br />
+      </div><br /><br />
+
+      <!-- Liste déroulante "Rôle" avec trois choix Admin/Employé/Vétérinaire -->
+      <label for="RôleInput" class="form-label">Rôle</label>
+      <select class="form-select input-field" aria-label="Default select example">
+        <option selected>Sélectionner un rôle</option>
+        <option value="1">Employé</option>
+        <option value="2">Vétérinaire</option>
+        <option value="3">Administrateur</option>
+      </select><br /><br />
       <!-- Fin liste -->
+
       <div class="mb-3">
         <label for="PasswordInput" class="form-label">Nouveau mot de passe</label>
         <input type="password" class="form-control input-field" id="PasswordInput" name="Password">
@@ -33,6 +40,8 @@
         <label for="ValidatePasswordInput" class="form-label">Confirmez le mot de passe</label>
         <input type="password" class="form-control input-field" id="ValidatePasswordInput" name="PasswordConfirm">
       </div>
+
+      <!-- Boutons Annuler/Créer -->
       <div class="text-center pt-3">
         <a href="/account" class="btn btn-secondary btn-font-secondary">Annuler</a>
         <button type="submit" class="btn btn-primary btn-font-secondary">Créer l'utilisateur</button>

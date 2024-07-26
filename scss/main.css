@@ -12172,4 +12172,16 @@ hr {
   display: inline-block;
   width: 100px;
   text-align: left;
+}
+
+.container-role {
+  border: 1px solid #B6AC97;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Hind Madurai", serif;
+  color: #B6AC97;
+  font-weight: bold;
+  max-width: 90%;
+  width: 90%;
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
