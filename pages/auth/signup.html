@@ -1,0 +1,41 @@
+<!-- HeroScene (BigTitle - Création d'un utilsateur) -->
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1 class="bigtitle">Création d'un utilisateur</h1>
+    </div>
+</div>
+
+<div class="container container-form-center p-2">
+    <form class="form-container">
+      <div class="mb-3">
+        <label for="NomInput" class="form-label">Nom <span>*</span></label>
+        <input type="text" class="form-control input-field" id="NomInput" name="Nom">
+      </div>
+      <div class="mb-3">
+        <label for="PrenomInput" class="form-label">Prénom <span>*</span></label>
+        <input type="text" class="form-control input-field" id="PrenomInput" name="Prénom">
+      </div>
+      <div class="mb-3">
+        <label for="EmailInput" class="form-label">Email <span>*</span></label>
+        <input type="text" class="form-control input-field" id="EmailInput" placeholder="contact@email.com" name="Email">
+      </div><br />
+      <!-- Créer une liste déroulante avec trois choix Admin/Employé/Vétérinaire-->
+      <div class="mb-3">
+        <label for="RoleInput" class="form-label">Rôle <span>*</span></label>
+        <input type="text" class="form-control input-field" id="RoleInput" Placeholder="ICI LISTE DEROULANTE - Admin/Employé/Vétérinaire" name="Role">
+      </div><br />
+      <!-- Fin liste -->
+      <div class="mb-3">
+        <label for="PasswordInput" class="form-label">Nouveau mot de passe</label>
+        <input type="password" class="form-control input-field" id="PasswordInput" name="Password">
+      </div>
+      <div class="mb-3">
+        <label for="ValidatePasswordInput" class="form-label">Confirmez le mot de passe</label>
+        <input type="password" class="form-control input-field" id="ValidatePasswordInput" name="PasswordConfirm">
+      </div>
+      <div class="text-center pt-3">
+        <a href="/account" class="btn btn-secondary btn-font-secondary">Annuler</a>
+        <button type="submit" class="btn btn-primary btn-font-secondary">Créer l'utilisateur</button>
+      </div>
+    </form>
+  </div>
