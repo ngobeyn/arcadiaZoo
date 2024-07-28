@@ -15,25 +15,46 @@
             <p><strong>Email:</strong> johndoe@email.com</p><br />
             <div class="container-role">
                 <p>ADMINISTRATEUR</p>
-            </div><br /><br />
-            <div class="text-center pt-3">
-                <a href="/editAccount" class="btn btn-primary btn-font-secondary">Modifier mes informations</a>
-            </div>
-            <div class="text-center pt-3">
-                <a href="/editPassword" class="btn btn-primary btn-font-secondary">Changer de mot de passe</a>
             </div>
         </div>    
         <div class="col-5 container-acc-inf">
-            <h2><i class="bi bi-list-task"></i> Les actions</h2>
-            <div class="text-center pt-3">
-                <a href="#" class="btn btn-primary btn-font-secondary">Dashboard</a>
-            </div>
-            <div class="text-center pt-3">
-                <a href="/signup" class="btn btn-primary btn-font-secondary">Créer un utilisateur</a>
-            </div>
-            <div class="text-center pt-3">
-                <a href="#" class="btn btn-danger btn-font-secondary">Supprimer un utilisateur</a>
+            <h2><i class="bi bi-person-gear"></i> Mon compte</h2>
+            <div class="align-middle">
+                <div class="text-center">
+                    <a href="/editAccount" class="btn btn-primary btn-font-secondary">Modifier mes informations</a>
+                </div>
+                <div class="text-center pt-4">
+                    <a href="/editPassword" class="btn btn-primary btn-font-secondary">Changer de mot de passe</a>
+                </div>
             </div>
         </div>    
+    </div>
+
+    <!-- Tabs Bootstrap ajouter les fonctionnalités JS "bootstrap.js" -->
+    <div class="container table-responsive p-5">
+        <ul class="nav nav-tabs" id="adminTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard-tab-pane" type="button" role="tab" aria-controls="dashboard-tab-pane" aria-selected="true">Dashboard</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="cr-tab" data-bs-toggle="tab" data-bs-target="#cr-tab-pane" type="button" role="tab" aria-controls="cr-tab-pane" aria-selected="false">Comptes-rendus</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services-tab-pane" type="button" role="tab" aria-controls="services-tab-pane" aria-selected="false">Services / Horaires</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="habitats-tab" data-bs-toggle="tab" data-bs-target="#habitats-tab-pane" type="button" role="tab" aria-controls="habitats-tab-pane" aria-selected="false">Habitats / Animaux</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="gestionUser-tab" data-bs-toggle="tab" data-bs-target="#gestionUser-tab-pane" type="button" role="tab" aria-controls="gestionUser-tab-pane" aria-selected="false">Gestion des utilisateurs</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="adminTabContent">
+            <div class="tab-pane fade show active" id="dashboard-tab-pane" role="tabpanel" aria-labelledby="dashboard-tab" tabindex="0">La page du dashboard</div>
+            <div class="tab-pane fade" id="cr-tab-pane" role="tabpanel" aria-labelledby="cr-tab" tabindex="0">La liste de tous les comptes-rendus vétérinaire</div>
+            <div class="tab-pane fade" id="services-tab-pane" role="tabpanel" aria-labelledby="services-tab" tabindex="0">Voici les différents services et horaires du parc</div>
+            <div class="tab-pane fade" id="habitats-tab-pane" role="tabpanel" aria-labelledby="habitats-tab" tabindex="0">La page avec tous les habitats et les animaux du Zoo</div>
+            <div class="tab-pane fade" id="gestionUser-tab-pane" role="tabpanel" aria-labelledby="gestionUser-tab" tabindex="0">La liste de tous les utilisateurs</div>
+        </div>
     </div>
 </div>
