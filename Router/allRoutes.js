@@ -3,7 +3,7 @@ import Route from "./Route.js";
 //Définir ici vos routes
 export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
-    new Route("/signin", "Connexion", "/pages/auth/signin.html"),
+    new Route("/signin", "Connexion", "/pages/auth/signin.html", "js/auth/signin.js"),
     new Route("/account", "Mon compte", "/pages/auth/account.html", "/js/auth/account.js"),
     new Route("/editPassword", "Changement de mot de passe", "/pages/auth/editPassword.html"),
     new Route("/editAccount", "Modifier mes informations", "/pages/auth/editAccount.html"),
