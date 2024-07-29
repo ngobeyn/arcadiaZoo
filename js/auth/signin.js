@@ -13,6 +13,7 @@ function checkCredentials(){
         // Il faudra récupérer le vrai token
         const token = "lkdslnkjneoodlsmljzejqbciubqckjbciubqckjhbqziuybzqiboib";
 
+        setToken(token);
         // Placer ce token en cookie
 
         window.location.replace("/");
