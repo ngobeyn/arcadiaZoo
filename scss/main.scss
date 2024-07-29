@@ -55,6 +55,14 @@ p.pbigtitle{
     font-size: 60px;
 }
 
+.font-sans-serif {
+    font-family: $font-family-sans-serif;
+}
+
+.font-serif {
+    font-family: $font-family-serif;
+}
+
 .img-card{
     position: relative;
     .titre-card{
@@ -240,10 +248,6 @@ hr {
 .tab-content {
     font-family: $font-family-serif;
     margin: 20px;
-}
-
-.tab-title {
-    font-family: $font-family-sans-serif;
 }
 
 .custom-width-tbl {

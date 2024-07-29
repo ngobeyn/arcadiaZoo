@@ -12017,6 +12017,14 @@ p.pbigtitle {
   font-size: 60px;
 }
 
+.font-sans-serif {
+  font-family: "Shadows Into Light", sans-serif;
+}
+
+.font-serif {
+  font-family: "Hind Madurai", serif;
+}
+
 .img-card {
   position: relative;
 }
@@ -12204,10 +12212,6 @@ hr {
 .tab-content {
   font-family: "Hind Madurai", serif;
   margin: 20px;
-}
-
-.tab-title {
-  font-family: "Shadows Into Light", sans-serif;
 }
 
 .custom-width-tbl {
