@@ -1,0 +1,71 @@
+<!-- HeroScene (BigTitle - Création d'un utilsateur) -->
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1 class="bigtitle">Création d'un utilisateur</h1>
+    </div>
+</div>
+
+<!-- Début du formulaire de création d'utilisateur -->
+<div class="container container-form-center p-2">
+    <p class="text-danger">Tous les champs sont obligatoires.</p>
+    <form class="form-container">
+      <div class="mb-3">
+        <label for="NomInput" class="form-label">Nom</label>
+        <input type="text" class="form-control input-field" id="NomInput" name="Nom">
+        <div class="invalid-feedback font-serif">
+          Le nom est requis !
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="PrenomInput" class="form-label">Prénom</label>
+        <input type="text" class="form-control input-field" id="PrenomInput" name="Prénom">
+        <div class="invalid-feedback font-serif">
+          Le prénom est requis !
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="EmailInput" class="form-label">Email</label>
+        <input type="text" class="form-control input-field" id="EmailInput" placeholder="contact@email.com" name="Email">
+        <div class="invalid-feedback font-serif">
+          Le format de l'adresse email est incorrect !
+        </div>
+      </div><br /><br />
+
+      <!-- Liste déroulante "Rôle" avec deux choix possible Employé/Vétérinaire -->
+      <label for="RoleSelect" class="form-label">Rôle</label>
+      <select class="form-select input-field" id="RoleSelect" aria-label="Default select example">
+        <option value="" selected>Sélectionner un rôle</option>
+        <option value="1">Employé</option>
+        <option value="2">Vétérinaire</option>
+      </select>
+      <div class="invalid-feedback font-serif">
+        Veuillez sélectionner le rôle de l'utilisateur !
+      </div><br /><br />
+      <!-- Fin liste -->
+
+      <div class="mb-3">
+        <label for="PasswordInput" class="form-label">Nouveau mot de passe</label>
+        <input type="password" class="form-control input-field" id="PasswordInput" name="Password">
+        <div class="invalid-feedback font-serif">
+          Le mot de passe n'est pas assez robuste ! Au moins 8 caractères, comprenant au moins 1 lettre majuscule, 1 lettre minuscule, 1 chiffre et 1 caractère spécial.
+        </div>
+        <div class="valid-feedback font-serif">
+          Le mot de passe est assez robuste
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="ValidatePasswordInput" class="form-label">Confirmez le mot de passe</label>
+        <input type="password" class="form-control input-field" id="ValidatePasswordInput" name="PasswordConfirm">
+        <div class="invalid invalid-feedback font-serif">
+          La confirmation n'est pas identique au mot de passe.
+        </div>
+      </div>
+    
+
+      <!-- Boutons Annuler/Créer -->
+      <div class="text-center pt-3">
+        <a href="/account" class="btn btn-secondary btn-font-secondary">Annuler</a>
+        <button type="submit" class="btn btn-primary btn-font-secondary" id="btn-createUser">Créer l'utilisateur</button>
+      </div>
+    </form>
+  </div>

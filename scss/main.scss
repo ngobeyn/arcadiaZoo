@@ -1,0 +1,321 @@
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+@import 'custom';
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+main{
+    margin-bottom: 370px;
+}
+
+footer.footer{
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+.hero-scene{
+    position: relative;
+    margin-bottom: 20px;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/bg-BigTitle.png);
+        background-size: cover;
+        filter: brightness(0.5);
+    }
+
+    *{
+        // Positionner les éléments devant le ::before
+        position: relative;
+    }
+
+    .hero-scene-content{
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+p.pbigtitle{
+    font-family: $font-family-sans-serif;
+    font-size: 30px;
+}
+
+.bigtitle{
+    font-size: 60px;
+}
+
+.font-sans-serif {
+    font-family: $font-family-sans-serif;
+}
+
+.font-serif {
+    font-family: $font-family-serif;
+}
+
+.img-card{
+    position: relative;
+    .titre-card{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.container-bloc-center {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+p {
+    font-family: $font-family-serif;
+}
+
+.alinea{
+    text-indent: 5em;
+}
+
+h2 span{
+    color: $secondary;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.text-card-small{
+    font-size: 15px;
+
+}
+
+.form-label{
+    color: $secondary;
+}
+
+label span{
+    color: red;
+    font-family: $font-family-serif;
+}
+
+.input-field{
+    font-family: $font-family-serif;
+    background-color: #fff;
+    border: 1px solid $secondary;
+}
+
+.btn-right{
+    float: right;
+}
+
+.btn-font-secondary{
+    font-family: $font-family-serif;
+}
+
+.container-avis {
+    border: 1px solid $secondary;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    position: relative;
+}
+
+.pseudo-avis {
+    font-weight: bold;
+    color: $primary;
+    font-size: 1.2em;
+}
+
+.date-visite-avis {
+    color: #000000;
+    font-size: 1.2em;
+    font-style: bold;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid $secondary;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.comment-avis {
+    font-size: 1.1em;
+    line-height: 1.5;
+    max-width: 820px;
+    color: #333;
+}
+
+.bamboo {
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/bamboo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nenuphar {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/nenuphar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sakura {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/sakura.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-acc-inf {
+    position: relative;
+    border: 1px solid $secondary;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 500px;
+}
+.container-acc-inf h2 {
+    color: $primary;
+    font-family: $font-family-sans-serif;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $secondary;
+    padding-bottom: 10px;
+}
+.container-acc-inf p {
+    margin: 10px 0;
+    font-family: $font-family-serif;
+}
+.container-acc-inf p strong {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+.container-role {
+    border: 1px solid $danger;
+    border-radius: 8px;
+    text-align: center;
+    font-family: $font-family-serif;
+    color: $red;
+    font-weight: bold;
+    max-width: 90%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.align-middle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-link {
+    color: $secondary;
+}
+
+.nav-link:hover {
+    color: $primary;
+}
+
+.tab-content {
+    font-family: $font-family-serif;
+    margin: 20px;
+}
+
+.custom-width-tbl {
+    width: 20%;
+}
+
+.text-align-tbl {
+    vertical-align: middle;
+}
+
+.right-aligned-text {
+    text-align: right;
+}
+
+//===== CSS Tables-responsive =====//
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
