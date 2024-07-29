@@ -55,6 +55,14 @@ p.pbigtitle{
     font-size: 60px;
 }
 
+.font-sans-serif {
+    font-family: $font-family-sans-serif;
+}
+
+.font-serif {
+    font-family: $font-family-serif;
+}
+
 .img-card{
     position: relative;
     .titre-card{
@@ -208,4 +216,106 @@ hr {
     display: inline-block;
     width: 100px;
     text-align: left;
+}
+
+.container-role {
+    border: 1px solid $danger;
+    border-radius: 8px;
+    text-align: center;
+    font-family: $font-family-serif;
+    color: $red;
+    font-weight: bold;
+    max-width: 90%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.align-middle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-link {
+    color: $secondary;
+}
+
+.nav-link:hover {
+    color: $primary;
+}
+
+.tab-content {
+    font-family: $font-family-serif;
+    margin: 20px;
+}
+
+.custom-width-tbl {
+    width: 20%;
+}
+
+.text-align-tbl {
+    vertical-align: middle;
+}
+
+.right-aligned-text {
+    text-align: right;
+}
+
+//===== CSS Tables-responsive =====//
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
 }
