@@ -1,13 +1,22 @@
 const tokenCookieName = "accesstoken";
+const RoleCookieName = "role";
 const signoutBtn = document.getElementById("btnSignout");
 
 signoutBtn.addEventListener("click", signout);
 
+// Fonction qui permet de récupérer le rôle
+function getRole(){
+    return getCookie(RoleCookieName);
+}
+
+// Fonction de suppression du cookie à la déconnexion
 function signout(){
     eraseCookie(tokenCookieName);
+    eraseCookie(RoleCookieName);
     window.location.reload();
 }
 
+// Fonction qui permet de placer le token dans le cookie
 function setToken(token){
     setCookie(tokenCookieName, token, 7);
 }
@@ -51,11 +60,49 @@ function isConnected(){
 }
 
 
+/*
+disconnected
+connected (admin ou employe ou veterinaire)
+    - admin
+    - employe
+    - veterinaire
+*/
 
 
-if(isConnected()){
-    alert("Je suis connecté !");
-}
-else{
-    alert("Je ne suis pas connecté !")
+// Fonction qui permet d'afficher ou masquer des éléments en fonction d'un role
+function showAndHideElementsForRoles(){
+    const userConnected = isConnected();
+    const role = getRole();
+
+    let allElementsToEdit = document.querySelectorAll('[data-show]');
+
+    allElementsToEdit.forEach(element =>{
+        switch(element.dataset.show){
+            case 'disconnected':
+                if(userConnected){
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'connected':
+                if(!userConnected){
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'admin':
+                if(!userConnected || role != "admin"){
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'employe':
+                if(!userConnected || role != "employe"){
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'veterinaire':
+                if(!userConnected || role != "veterinaire"){
+                        element.classList.add("d-none");
+                }
+                break;
+        }
+    })
 }
