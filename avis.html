@@ -1,0 +1,35 @@
+<!-- HeroScene (BigTitle - Connexion) -->
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1 class="bigtitle">Les avis sur le Zoo</h1>
+    </div>
+</div>
+
+<div class="container p-3">
+    <!-- Début du Formulaire de Connexion -->
+    <h2 class="text-primary">Laissez un avis</h2>
+    <form id="avisForm" class="p-4">
+        <div class="mb-3">
+            <label for="pseudo" class="form-label">Pseudo :</label>
+            <input type="text" class="form-control input-field" id="pseudo" name="pseudo">
+            <div class="invalid-feedback font-serif">
+                Le pseudo est requis
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="commentaire" class="form-label">Commentaire :</label>
+            <textarea class="form-control input-field" id="commentaire" name="commentaire"></textarea>
+        </div>
+        <div class="text-center pt-3">            
+            <button type="submit" class="btn btn-primary btn-font-secondary" id="btn-avisSubmit" disabled>Publier un avis</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <!-- Liste des avis laissés et approuvés -->
+    <h2 class="text-primary p-4">Les Avis sur le Zoo</h2>
+    <div id="avisList">
+        <!-- Contenu des avis approuvés seront intégrés ici -->
+    </div>
+</div>
