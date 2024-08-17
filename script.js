@@ -1,4 +1,18 @@
 const tokenCookieName = "accesstoken";
+const roleCookieName = "role";
+const signoutBtn = document.getElementById("btnSignout");
+const apiUrl = "http://localhost:8000/api/";
+
+signoutBtn.addEventListener("click", signout);
+
+function getRole() {
+    return getCookie(roleCookieName);
+}
+function signout() {
+    eraseCookie(tokenCookieName);
+    eraseCookie(roleCookieName);
+    window.location.reload();
+}
 
 function setToken(token){
     setCookie(tokenCookieName, token, 7);
@@ -8,14 +22,14 @@ function getToken(){
     return getCookie(tokenCookieName);
 }
 
-function setCookie(name,value,days) {
-    var expires = "";
+function setCookie(name, value, days) {
+    let expires = "";
     if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
         expires = "; expires=" + date.toUTCString();
     }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
 }
 
 function getCookie(name) {
@@ -42,10 +56,45 @@ function isConnected(){
     }
 }
 
+/*
+disconnected (admin ou client)
+    - admin
+    - client
+*/
 
-// TEST STATUS MESSAGE
-if(isConnected()) {
-    alert("Je suis connecté !");
-} else {
-    alert("Je ne suis pas connecté !");
+// Fonction pour afficher et masquer les éléments en fonction du rôle
+function showAndHideElementsForRoles() {
+    const userConnected = isConnected();
+    const role = getRole();
+
+    let allElementsToEdit = document.querySelectorAll('[data-show]');
+    allElementsToEdit.forEach(element => {
+        switch(element.dataset.show) {
+            case 'disconnected':
+                if(userConnected){
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'connected':
+                if(!userConnected){
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'ADMINISTRATEUR':
+                if(!userConnected || role != "ADMINISTRATEUR"){
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'EMPLOYE':
+                if(!userConnected || role != "EMPLOYE"){
+                    element.classList.add("d-none");
+                }
+                break;
+            case 'VETERINAIRE':
+                if(!userConnected || role != "VETERINAIRE"){
+                    element.classList.add("d-none");
+                }
+                break;
+        }
+    })
 }
