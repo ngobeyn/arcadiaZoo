@@ -1,0 +1,26 @@
+<!-- HeroScene (BigTitle - Connexion) -->
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1 class="bigtitle">Connexion</h1>
+    </div>
+</div>
+
+<!-- Début du Formulaire de Connexion -->
+<div class="container">
+    <form id="formSignin">
+        <div class="mb-3">
+            <label for="EmailInput" class="form-label">Email <span>*</span></label>
+            <input type="email" class="form-control input-field" id="EmailInput" placeholder="contact@email.com" name="email">
+            <div class="invalid-feedback font-serif">
+                Le mail et le mot de passe ne correspondent pas
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="PasswordInput" class="form-label">Mot de Passe <span>*</span></label>
+            <input type="password" class="form-control input-field" id="PasswordInput" name="password">
+        </div>
+        <div class="text-center pt-3">
+            <button type="button" class="btn btn-primary btn-font-secondary" id="btnSignin">Connexion</button>
+        </div>
+    </form>
+</div>
